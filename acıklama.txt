@@ -1,0 +1,73 @@
+﻿ 9 cisim yerleştirlecek
+
+birinci iterasyon(popülasyon)(birinci iterasyondaki bireyler random olacak)
+1.birey(çözüm): 6 2 3 7 1 4 9 5 8    
+2.birey	      : 4 8 9 7 2 6 3 1 5    	
+3.birey	      : 5 1 9 8 7 4 2 3 6
+4.birey	      : 5 6 8 9 3 2 1 7 4
+
+
+
+fitness(1.birey): 4
+fitness(2.birey): 7
+fitness(3.birey): 9
+fitness(4.birey): 5
+
+( 100 sayısı 4 7 9 5 ile ters orantılı olarak dağıtılabilir.)
+
+4+7+9+5=25
+1.birey(4/25)= % 16	 
+2.birey(7/25)= % 28
+3.birey(9/25)= % 36
+4.birey(5/25)= % 20
+
+küçükten büyüğe yazalım: 
+16
+20 
+28
+36
+kümülatif toplam
+16
+36  
+64
+100
+bir ile yüz arasında random bir değer belirleyelim
+random değer 0 ile 16 arasındaysa birinci birey
+random değer 16 ile 36 arasındaysa ikinci birey
+random değer 36 ile 64 arasındaysa üçüncü birey
+random değer 64 ile 100 arasındaysa dördüncü birey
+diyelimki rndom değerler 50 40 75 22
+50 3. birey
+40 3. birey
+75 4. birey
+22 1. birey 
+
+çaprazlama yapalım
+
+en iyi iki birey doğrudan ikinci populasyonda
+yani 3. birey ile ikinci birey 
+
+ilk çaprazlama
+1.birey       : 6 2 3 7 1 4 9 5 8    
+3.birey	      : 5 1 9 8 7 4 2 3 6
+(random bir sayı bir ile dokuz arasında örneğin 5)
+birinci bireyden ile 5 sayı  ikinci bireyden sırayla yeni bireyde olmayan sayıları ekliyoruz 
+ birinci yeni birey    : 6 2 3 7 1 5 9 8 7 4
+
+
+ikinci çaprazlama
+3.birey	      : 5 1 9 8 7 4 2 3 6
+4.birey	      : 5 6 8 9 3 2 1 7 4
+çaprazlama(random sayı 3 olsun)
+ikinci yeni birey   : 5 1 9 6 8 3 2 1 7 4
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oluşan yeni popülasyon
+
+2.birey	      : 4 8 9 7 2 6 3 1 5    	
+3.birey	      : 5 1 9 8 7 4 2 3 6
+birinci yeni birey    : 6 2 3 7 1 5 9 8 7 4
+ikinci yeni birey   : 5 1 9 6 8 3 2 1 7 4
+
+daha sonra tekrar atnı işlemler fitness çaprazlama seçme
+
